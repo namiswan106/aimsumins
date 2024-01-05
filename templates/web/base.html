@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zxx">
+{% load static %}
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Title -->
+    <title>Techvio - IT Solutions & Business Services Website Template</title>
+    <!-- Google Fonts -->
+    <link href="/static/web/fonts.googleapis.com/css2ad7e.css?family=Dosis:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="/static/web/fonts.googleapis.com/css2e303.css?family=Catamaran:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'web/img/favicon.png' %}">
+    <!-- Bootstrap Min CSS -->
+    <link rel="stylesheet" href="{% static 'web/css/bootstrap.min.css' %}">
+    <!-- Animate Min CSS -->
+    <link rel="stylesheet" href="{% static 'web/css/animate.min.css' %}">
+    <!-- FlatIcon CSS -->
+    <link rel="stylesheet" href="{% static 'web/css/flaticon.css' %}">
+    <!-- Font Awesome Min CSS -->
+    <link rel="stylesheet" href="{% static 'web/css/fontawesome.min.css' %}">
+    <!-- Bootstrap Icon CSS -->
+    <link rel="stylesheet" href="{% static 'web/css/bootstrap-icons.css' %}">
+    <!-- Mean Menu CSS -->
+    <link rel="stylesheet" href="{% static 'web/css/meanmenu.css' %}">
+    <!-- Magnific Popup Min CSS -->
+    <link rel="stylesheet" href="{% static 'web/css/magnific-popup.min.css' %}">
+    <!-- Swiper Min CSS -->
+    <link rel="stylesheet" href="{% static 'web/css/swiper.min.css' %}">
+    <!-- Owl Carousel Min CSS -->
+    <link rel="stylesheet" href="{% static 'web/css/owl.carousel.min.css' %}">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static 'web/css/style.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'web/css/responsive.css' %}">
+</head>
+
+<body>
+
+    <!-- Start Preloader Section -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="shadow"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+    <!-- End Preloader Section -->
+
+
+    {% include "web/partials/header.html" %}
+    {% block content %}{% endblock %}
+    {% include "web/partials/footer.html" %}
+
+
+    <!-- Start Go Top Section -->
+    <div class="go-top">
+        <i class="fas fa-chevron-up"></i>
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    <!-- End Go Top Section -->
+
+    <!-- jQuery Min JS -->
+    <script src="{% static 'web/js/jquery.min.js' %}"></script>
+    <!-- Popper Min JS -->
+    <script src="{% static 'web/js/popper.min.js' %}"></script>
+    <!-- Bootstrap Min JS -->
+    <script src="{% static 'web/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Mean Menu JS  -->
+    <script src="{% static 'web/js/jquery.meanmenu.js' %}"></script>
+    <!-- Appear Min JS -->
+    <script src="{% static 'web/js/jquery.appear.min.js' %}"></script>
+    <!-- CounterUp Min JS -->
+    <script src="{% static 'web/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'web/js/jquery.counterup.min.js' %}"></script>
+    <!-- Owl Carousel Min JS -->
+    <script src="{% static 'web/js/owl.carousel.min.js' %}"></script>
+    <!-- Magnific Popup Min JS -->
+    <script src="{% static 'web/js/jquery.magnific-popup.min.js' %}"></script>
+    <!-- Isotope Min JS -->
+    <script src="{% static 'web/js/isotope.pkgd.min.js' %}"></script>
+    <!-- Swiper Min JS -->
+    <script src="{% static 'web/js/swiper.min.js' %}"></script>
+    <!-- WOW Min JS -->
+    <script src="{% static 'web/js/wow.min.js' %}"></script>
+    <!-- Main JS -->
+    <script src="{% static 'web/js/main.js' %}"></script>
+
+</body>
+
+</html>
