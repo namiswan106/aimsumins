@@ -58,7 +58,7 @@
 <!-- End Home Section -->
 
 <!-- Start Services Two Section -->
-<section class="services-section-two section-padding">
+<section class="testimonial-section section-padding">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -67,124 +67,26 @@
 					<h2>Our Services</h2>
 				</div>
 			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="single-services-two-item">
-					<div class="services-icon-box">
-						<div class="default-icon">
-							<img src="{% static 'web/img/icon/services-icon-1.svg' %}" alt="svg icon">
+			<div class="col-lg-12 col-md-12">
+				<div class="service-slider owl-carousel owl-theme">
+					{% for item in services %}
+					<div class="single-services-two-item">
+						<div class="">
+							<div class="">
+								<img src="{{item.image.url}}" alt="image">
+							</div>
+							
 						</div>
-						<div class="hover-icon">
-							<img src="{% static 'web/img/icon/services-icon-hover-1.svg' %}" alt="svg icon">
-						</div>
-					</div>
-					<div class="services-two-content">
-						<h3>IT Consulting</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-							dolore magna aliqua</p>
-						<div class="services-btn">
-							<a href="#" class="read-more"><i class="bi bi-arrow-right-short"></i> Read More</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="single-services-two-item">
-					<div class="services-icon-box">
-						<div class="default-icon">
-							<img src="{% static 'web/img/icon/services-icon-2.svg' %}" alt="svg icon">
-						</div>
-						<div class="hover-icon">
-							<img src="{% static 'web/img/icon/services-icon-hover-2.svg' %}" alt="svg icon">
+						<div class="services-two-content">
+							<h3 class="mt-3">{{item.title}}</h3>
+							<p>{{item.description|safe|truncatechars:100}}</p>
+							<div class="services-btn">
+								<a href="{{item.get_absolute_url}}" class="read-more"><i class="bi bi-arrow-right-short"></i> Read More</a>
+							</div>
 						</div>
 					</div>
-					<div class="services-two-content">
-						<h3>Cloud Solutions</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-							dolore magna aliqua</p>
-						<div class="services-btn">
-							<a href="#" class="read-more"><i class="bi bi-arrow-right-short"></i> Read More</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="single-services-two-item">
-					<div class="services-icon-box">
-						<div class="default-icon">
-							<img src="{% static 'web/img/icon/services-icon-3.svg' %}" alt="svg icon">
-						</div>
-						<div class="hover-icon">
-							<img src="{% static 'web/img/icon/services-icon-hover-3.svg' %}" alt="svg icon">
-						</div>
-					</div>
-					<div class="services-two-content">
-						<h3>Managed IT Service</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-							dolore magna aliqua</p>
-						<div class="services-btn">
-							<a href="#" class="read-more"><i class="bi bi-arrow-right-short"></i> Read More</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="single-services-two-item">
-					<div class="services-icon-box">
-						<div class="default-icon">
-							<img src="{% static 'web/img/icon/services-icon-4.svg' %}" alt="svg icon">
-						</div>
-						<div class="hover-icon">
-							<img src="{% static 'web/img/icon/services-icon-hover-4.svg' %}" alt="svg icon">
-						</div>
-					</div>
-					<div class="services-two-content">
-						<h3>Responsive Design</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-							dolore magna aliqua</p>
-						<div class="services-btn">
-							<a href="#" class="read-more"><i class="bi bi-arrow-right-short"></i> Read More</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="single-services-two-item">
-					<div class="services-icon-box">
-						<div class="default-icon">
-							<img src="{% static 'web/img/icon/services-icon-5.svg' %}" alt="svg icon">
-						</div>
-						<div class="hover-icon">
-							<img src="{% static 'web/img/icon/services-icon-hover-5.svg' %}" alt="svg icon">
-						</div>
-					</div>
-					<div class="services-two-content">
-						<h3>Cyber Security</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-							dolore magna aliqua</p>
-						<div class="services-btn">
-							<a href="#" class="read-more"><i class="bi bi-arrow-right-short"></i> Read More</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="single-services-two-item">
-					<div class="services-icon-box">
-						<div class="default-icon">
-							<img src="{% static 'web/img/icon/services-icon-6.svg' %}" alt="svg icon">
-						</div>
-						<div class="hover-icon">
-							<img src="{% static 'web/img/icon/services-icon-hover-6.svg' %}" alt="svg icon">
-						</div>
-					</div>
-					<div class="services-two-content">
-						<h3>Solving IT Problems</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-							dolore magna aliqua</p>
-						<div class="services-btn">
-							<a href="#" class="read-more"><i class="bi bi-arrow-right-short"></i> Read More</a>
-						</div>
-					</div>
+					{% endfor %}
+
 				</div>
 			</div>
 		</div>
@@ -223,95 +125,6 @@
 </section>
 <!-- End About Section -->
 
-<!-- Start Portfolio Section -->
-<section class="portfolio-area section-padding">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-title">
-					<h6 class="sub-title">Recent Works</h6>
-					<h2>Our Portfolio</h2>
-				</div>
-			</div>
-			<div class="col-md-12">
-				<div class="portfolio-list">
-					<ul class="nav" id="portfolio-flters">
-						<li class="filter filter-active" data-filter=".all">all</li>
-						<li class="filter" data-filter=".branding">branding</li>
-						<li class="filter" data-filter=".application">application</li>
-						<li class="filter" data-filter=".webdesign">web design</li>
-						<li class="filter" data-filter=".photography">photography</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="portfolio-container">
-			<div class="row">
-				<!-- portfolio-item -->
-				<div class="col-lg-4 col-md-6 portfolio-grid-item all branding">
-					<div class="portfolio-item">
-						<img src="{% static 'web/img/portfolio/portfolio-1.jpg' %}" alt="image">
-						<div class="portfolio-content-overlay">
-							<p>App Store | Social Media</p>
-							<h3><a href="single-portfolio.html">Creative Web Design</a></h3>
-						</div>
-					</div>
-				</div>
-				<!-- portfolio-item -->
-				<div class="col-lg-4 col-md-6 portfolio-grid-item all photography">
-					<div class="portfolio-item">
-						<img src="{% static 'web/img/portfolio/portfolio-2.jpg' %}" alt="image">
-						<div class="portfolio-content-overlay">
-							<p>App Store | Social Media</p>
-							<h3><a href="single-portfolio.html">Creative Web Design</a></h3>
-						</div>
-					</div>
-				</div>
-				<!-- portfolio-item -->
-				<div class="col-lg-4 col-md-6 portfolio-grid-item all branding webdesign">
-					<div class="portfolio-item">
-						<img src="{% static 'web/img/portfolio/portfolio-3.jpg' %}" alt="image">
-						<div class="portfolio-content-overlay">
-							<p>App Store | Social Media</p>
-							<h3><a href="single-portfolio.html">Creative Web Design</a></h3>
-						</div>
-					</div>
-				</div>
-				<!-- portfolio-item -->
-				<div class="col-lg-4 col-md-6 portfolio-grid-item all webdesign">
-					<div class="portfolio-item">
-						<img src="{% static 'web/img/portfolio/portfolio-4.jpg' %}" alt="image">
-						<div class="portfolio-content-overlay">
-							<p>App Store | Social Media</p>
-							<h3><a href="single-portfolio.html">Creative Web Design</a></h3>
-						</div>
-					</div>
-				</div>
-				<!-- portfolio-item -->
-				<div class="col-lg-4 col-md-6 portfolio-grid-item all application">
-					<div class="portfolio-item">
-						<img src="{% static 'web/img/portfolio/portfolio-5.jpg' %}" alt="image">
-						<div class="portfolio-content-overlay">
-							<p>App Store | Social Media</p>
-							<h3><a href="single-portfolio.html">Creative Web Design</a></h3>
-						</div>
-					</div>
-				</div>
-				<!-- portfolio-item -->
-				<div class="col-lg-4 col-md-6 portfolio-grid-item all application photography">
-					<div class="portfolio-item">
-						<img src="{% static 'web/img/portfolio/portfolio-6.jpg' %}" alt="image">
-						<div class="portfolio-content-overlay">
-							<p>App Store | Social Media</p>
-							<h3><a href="single-portfolio.html">Creative Web Design</a></h3>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- End Portfolio Section -->
 
 <!-- Start Works Process Section -->
 <section class="workprocess-section bg-grey section-padding">
@@ -432,6 +245,9 @@
 	</div>
 </section>
 <!-- End Counter Section -->
+
+
+
 
 <!-- Start Testimonial Section -->
 <section class="testimonial-section section-padding">
@@ -583,30 +399,8 @@
 </section>
 <!-- End Faq Section -->
 
-<!-- Start Hire Section -->
-<section class="hire-section">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 offset-lg-2 col-md-12">
-				<div class="hire-content">
-					<h6 class="sub-title">Want to work with us?</h6>
-					<h2>Digitally Transform & Grow Your Business</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud consectetur voluptatem
-						accusantium doloremque adipiscing elit.</p>
-					<div class="hire-btn">
-						<a class="default-btn" href="tel:12345678">Call Now<span></span></a>
-						<a class="default-btn-one" href="contact.html">Contact Us<span></span></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- End Hire Section -->
 
-<!-- Start Blog Section -->
-<section class="blog-section bg-grey pt-100 pb-70">
+<section class="blog-section section-padding">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -615,164 +409,70 @@
 					<h2>Recent Blog</h2>
 				</div>
 			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="blog-single-item">
-					<div class="blog-image">
-						<a href="single-blog.html">
-							<img src="{% static 'web/img/blog/blog-1.jpg' %}" alt="image">
-						</a>
-					</div>
-					<div class="blog-description">
-						<ul class="blog-info">
-							<li>
-								<a href="#"><i class="bi bi-person-circle"></i> Author</a>
-							</li>
-							<li>
-								<a href="#"><i class="bi bi-calendar-check"></i> 17 June 2023</a>
-							</li>
-						</ul>
-						<div class="blog-text">
-							<h3>
-								<a href="single-blog.html">
-									Planning for a Safe Return to the Workplace IT Solutions
-								</a>
-							</h3>
-							<p>Lorem ipsum dolor sit amet, consectetu adipiscing elit, sed eiusmod tempor incididunt ut
-								labore dolore magna aliqua</p>
-							<div class="blog-btn"> <a href="single-blog.html" class="read-more"><i
-										class="bi bi-arrow-right-short"></i> Read More</a>
+			<div class="col-lg-12 col-md-12">
+				<div class="blog-slider owl-carousel owl-theme">
+					{% for item in blogs %}
+					<div class="blog-single-item">
+						<div class="blog-image">
+							<a href="single-blog.html">
+								<img src="{{item.image.url}}" alt="image">
+							</a>
+						</div>
+						<div class="blog-description">
+							<ul class="blog-info">
+								
+								<li>
+									<a href="#"><i class="bi bi-calendar-check"></i> {{item.date}}</a>
+								</li>
+							</ul>
+							<div class="blog-text">
+								<h3>
+									<a href="{{item.get_absolute_url}}">
+										{{item.title}}
+									</a>
+								</h3>
+								<p>{{item.description|safe|truncatechars:100}}</p>
+								<div class="blog-btn">
+									<a href="{{item.get_absolute_url}}" class="read-more"><i class="bi bi-arrow-right-short"></i>
+										Read More</a>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="blog-single-item">
-					<div class="blog-image">
-						<a href="single-blog.html">
-							<img src="{% static 'web/img/blog/blog-2.jpg' %}" alt="image">
-						</a>
-					</div>
-					<div class="blog-description">
-						<ul class="blog-info">
-							<li>
-								<a href="#"><i class="bi bi-person-circle"></i> Author</a>
-							</li>
-							<li>
-								<a href="#"><i class="bi bi-calendar-check"></i> 20 June 2023</a>
-							</li>
-						</ul>
-						<div class="blog-text">
-							<h3>
-								<a href="single-blog.html">
-									Announcing Our New Smiles for Success Charity
-								</a>
-							</h3>
-							<p>Lorem ipsum dolor sit amet, consectetu adipiscing elit, sed eiusmod tempor incididunt ut
-								labore dolore magna aliqua</p>
-							<div class="blog-btn">
-								<a href="single-blog.html" class="read-more"><i class="bi bi-arrow-right-short"></i>
-									Read More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="blog-single-item">
-					<div class="blog-image">
-						<a href="single-blog.html">
-							<img src="{% static 'web/img/blog/blog-3.jpg' %}" alt="image">
-						</a>
-					</div>
-					<div class="blog-description">
-						<ul class="blog-info">
-							<li>
-								<a href="#"><i class="bi bi-person-circle"></i> Author</a>
-							</li>
-							<li>
-								<a href="#"><i class="bi bi-calendar-check"></i> 25 June 2023</a>
-							</li>
-						</ul>
-						<div class="blog-text">
-							<h3>
-								<a href="single-blog.html">
-									Machine Learning Applications for Every Industry
-								</a>
-							</h3>
-							<p>Lorem ipsum dolor sit amet, consectetu adipiscing elit, sed eiusmod tempor incididunt ut
-								labore dolore magna aliqua</p>
-							<div class="blog-btn">
-								<a href="single-blog.html" class="read-more"><i class="bi bi-arrow-right-short"></i>
-									Read More</a>
-							</div>
-						</div>
-					</div>
+					{% endfor %}
+
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-<!-- End Blog Section -->
 
-<!-- Start Partner section -->
-<section class="partner-section pt-100 pb-70">
+
+<section class="testimonial-section section-padding">
 	<div class="container">
-		<div class="partner-title">
-			<h6 class="sub-title">Trusted By Over 1500</h6>
-			<h2>Our Customers</h2>
-		</div>
-		<div class="partner-list">
-			<div class="partner-item">
-				<a href="#0">
-					<img src="{% static 'web/img/partner/client-1.png' %}" alt="image">
-				</a>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="section-title">
+					<h6 class="sub-title">Trusted By Over 1500</h6>
+					<h2>Our Customers</h2>
+				</div>
 			</div>
-			<div class="partner-item">
-				<a href="#0">
-					<img src="{% static 'web/img/partner/client-2.png' %}" alt="image">
-				</a>
-			</div>
-			<div class="partner-item">
-				<a href="#0">
-					<img src="{% static 'web/img/partner/client-3.png' %}" alt="image">
-				</a>
-			</div>
-			<div class="partner-item">
-				<a href="#0">
-					<img src="{% static 'web/img/partner/client-4.png' %}" alt="image">
-				</a>
-			</div>
-			<div class="partner-item">
-				<a href="#0">
-					<img src="{% static 'web/img/partner/client-5.png' %}" alt="image">
-				</a>
-			</div>
-			<div class="partner-item">
-				<a href="#0">
-					<img src="{% static 'web/img/partner/client-6.png' %}" alt="image">
-				</a>
-			</div>
-			<div class="partner-item">
-				<a href="#0">
-					<img src="{% static 'web/img/partner/client-7.png' %}" alt="image">
-				</a>
-			</div>
-			<div class="partner-item">
-				<a href="#0">
-					<img src="{% static 'web/img/partner/client-8.png' %}" alt="image">
-				</a>
-			</div>
-			<div class="partner-item">
-				<a href="#0">
-					<img src="{% static 'web/img/partner/client-9.png' %}" alt="image">
-				</a>
+			<div class="col-lg-12 col-md-12">
+				<div class="clientlogo-slider owl-carousel owl-theme">
+					{% for i in client_logos %}
+					<div class="partner-item">
+						<a href="#0">
+							<img src="{{i.image.url}}" alt="image">
+						</a>
+					</div>
+					{% endfor %}
+					
+
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
-<!-- End Partner section -->
-
 
 
 {% endblock %}

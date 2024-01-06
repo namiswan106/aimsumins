@@ -32,7 +32,8 @@
 				<div class="col-lg-10 offset-lg-1">
 					<div class="contact-form">
 						<p class="form-message"></p>
-						<form id="contact-form" class="contact-form form" action="https://cutesolution.com/html/techvio/phpmails.php" method="POST">
+						<form class="contact-form form ajax reload" method="POST">
+							{% csrf_token %}
 							<div class="row">
 								<div class="col-lg-6 col-md-6">
 									<div class="form-group">
