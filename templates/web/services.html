@@ -10,7 +10,7 @@
 					<div class="page-title-content">
 						<h2>Services</h2>
 						<ul>
-							<li><a href="index.html">Home</a></li>
+							<li><a href="{% url "web:index" %}">Home</a></li>
 							<li>Services</li>
 						</ul>
 					</div>
@@ -21,7 +21,7 @@
 	<!-- End Page Title Section -->
 	
 	<!-- Start Services Section -->
-	<section class="services-section section-padding">
+	<section class="services-section section-padding section-50-padd">
 		<div class="container">
 			<div class="row">
 				{% for item in service_list %}
@@ -29,7 +29,7 @@
 					<div class="single-services-two-item">
 						<div class="">
 							<div class="">
-								<img src="{{item.image.url}}" alt="image">
+								<a href="{{item.get_absolute_url}}"><img src="{{item.image.url}}" alt="image"></a>
 							</div>
 							
 						</div>

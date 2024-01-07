@@ -2,19 +2,19 @@
 {% load static %}
 {% block content %}
 <!-- Start Home Section -->
-<div class="home-section home-2">
+<div class="home-section home-2 p-sm-30">
 	<div class="d-table">
 		<div class="d-table-cell">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-6 col-md-12">
 						<div class="main-banner-content">
-							<h1>Your Successful Business, Our Fantastic <span class="text-gradient">IT Support.</span>
+							<h1>Unlocking Potential: Your Trusted HR Partner for Strategic Solutions 
+								{% comment %} <span class="text-gradient">IT Support.</span> {% endcomment %}
 							</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor magna
-								aliqua, magna aliqua. ipsum is simply dummy text of the printing.</p>
+							<p>Empowering Businesses through Tailored HR Solutions. From Recruitment to Employee Engagement, We Drive Success Together.</p>
 							<div class="banner-btn">
-								<a class="default-btn-one" href="services.html">Our Service <span></span></a>
+								<a class="default-btn-one" href="{% url "web:services" %}">Our Service <span></span></a>
 								<div class="video-box">
 									<a href="https://www.youtube.com/watch?v=G9TdA8d5aaU" class="popup-video video-btn">
 										<i class="fa fa-play"></i></a>
@@ -58,7 +58,7 @@
 <!-- End Home Section -->
 
 <!-- Start Services Two Section -->
-<section class="testimonial-section section-padding">
+<section class="testimonial-section section-padding p-sm-30 service-main pt-lg-0">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -73,7 +73,7 @@
 					<div class="single-services-two-item">
 						<div class="">
 							<div class="">
-								<img src="{{item.image.url}}" alt="image">
+								<a href="{{item.get_absolute_url}}"><img src="{{item.image.url}}" alt="image"></a>
 							</div>
 							
 						</div>
@@ -95,23 +95,17 @@
 <!-- End Services Two Section -->
 
 <!-- Start About Section -->
-<section class="about-area bg-grey section-padding">
+<section class="about-area bg-grey section-padding p-sm-30 index-about-padd">
 	<div class="container">
 		<div class="row d-flex align-items-center">
 			<div class="col-lg-6 col-md-12">
 				<div class="about-content">
 					<h6 class="sub-title">About Our Company</h6>
-					<h2>Providing Your Business With A Quality IT Service is Our Passion</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua enim ad minim</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-						laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-						laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<h2>Transforming Businesses, Empowering Talent: Discover Aimsumins</h2>
+					<p>At Aimsumins, we go beyond conventional HR consultancy. Our mission is to catalyze organizational growth by delivering innovative, tailor-made solutions. From strategic workforce planning to fostering a culture of engagement, we are your dedicated partner in unleashing the full potential of your business. Explore the future of HR with Aimsumins – where success meets strategy.</p>
+					
 					<div class="about-btn-box">
-						<a class="default-btn" href="about.html">Learn More <span></span></a>
+						<a class="default-btn" href="{% url "web:about" %}">Learn More <span></span></a>
 					</div>
 				</div>
 			</div>
@@ -126,78 +120,12 @@
 <!-- End About Section -->
 
 
-<!-- Start Works Process Section -->
-<section class="workprocess-section bg-grey section-padding">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-title">
-					<h6 class="sub-title">4 Step Work Process</h6>
-					<h2>Working Process</h2>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6">
-				<div class="workprocess-single-item">
-					<div class="workprocess-icon-box">
-						<img src="{% static 'web/img/icon/workprocess-icon-1.svg' %}" alt="icon">
-					</div>
-					<div class="workprocess-info">
-						<h3>Discover</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-							dolore magna aliqua.</p>
-					</div>
-					<div class="workprocess-number-bg"><span>01</span></div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6">
-				<div class="workprocess-single-item">
-					<div class="workprocess-icon-box">
-						<img src="{% static 'web/img/icon/workprocess-icon-2.svg' %}" alt="icon">
-					</div>
-					<div class="workprocess-info">
-						<h3>Design & Development</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-							dolore magna aliqua.</p>
-					</div>
-					<div class="workprocess-number-bg"><span>02</span></div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6">
-				<div class="workprocess-single-item">
-					<div class="workprocess-icon-box">
-						<img src="{% static 'web/img/icon/workprocess-icon-3.svg' %}" alt="icon">
-					</div>
-					<div class="workprocess-info">
-						<h3>Install & Testing</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-							dolore magna aliqua.</p>
-					</div>
-					<div class="workprocess-number-bg"><span>03</span></div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6">
-				<div class="workprocess-single-item">
-					<div class="workprocess-icon-box">
-						<img src="{% static 'web/img/icon/workprocess-icon-4.svg' %}" alt="icon">
-					</div>
-					<div class="workprocess-info">
-						<h3>Project Delivery</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-							dolore magna aliqua.</p>
-					</div>
-					<div class="workprocess-number-bg"><span>04</span></div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- End Works Process Section -->
 
 <!-- Start Counter Section -->
-<section class="counter-area section-padding">
+<section class="counter-area section-padding p-sm-30 ">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-3 col-md-6 counter-item">
+			<div class="col-lg-3 col-md-6 col-6 counter-item">
 				<div class="single-counter">
 					<div class="counter-contents">
 						<h2>
@@ -208,7 +136,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-3 col-md-6 counter-item">
+			<div class="col-lg-3 col-md-6 col-6 counter-item">
 				<div class="single-counter">
 					<div class="counter-contents">
 						<h2>
@@ -219,7 +147,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-3 col-md-6 counter-item">
+			<div class="col-lg-3 col-md-6 col-6 counter-item">
 				<div class="single-counter">
 					<div class="counter-contents">
 						<h2>
@@ -230,7 +158,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-3 col-md-6 counter-item">
+			<div class="col-lg-3 col-md-6 col-6 counter-item">
 				<div class="single-counter">
 					<div class="counter-contents">
 						<h2>
@@ -249,102 +177,10 @@
 
 
 
-<!-- Start Testimonial Section -->
-<section class="testimonial-section section-padding">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-title">
-					<h6 class="sub-title">Our Testimonial</h6>
-					<h2>Client Feedback</h2>
-				</div>
-			</div>
-			<div class="col-lg-12 col-md-12">
-				<div class="testimonial-slider owl-carousel owl-theme">
-					<!-- testimonials item -->
-					<div class="single-testimonial">
-						<div class="rating-box">
-							<ul>
-								<li><i class="fa fa-star"></i></li>
-								<li><i class="fa fa-star"></i></li>
-								<li><i class="fa fa-star"></i></li>
-								<li><i class="fa fa-star"></i></li>
-								<li><i class="fa fa-star"></i></li>
-							</ul>
-						</div>
-						<div class="testimonial-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-								ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation.</p>
-						</div>
-						<div class="avatar">
-							<img src="{% static 'web/img/client/testimonial-1.jpg' %}" alt="testimonial images">
-						</div>
-						<div class="testimonial-bio">
-							<div class="bio-info">
-								<h3>Saabir al-Obeid</h3>
-								<span>Turkey</span>
-							</div>
-						</div>
-					</div>
-					<!-- testimonials item -->
-					<div class="single-testimonial">
-						<div class="rating-box">
-							<ul>
-								<li><i class="fa fa-star"></i></li>
-								<li><i class="fa fa-star"></i></li>
-								<li><i class="fa fa-star"></i></li>
-								<li><i class="fa fa-star"></i></li>
-								<li><i class="fa fa-star"></i></li>
-							</ul>
-						</div>
-						<div class="testimonial-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-								ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation.</p>
-						</div>
-						<div class="avatar">
-							<img src="{% static 'web/img/client/testimonial-2.jpg' %}" alt="testimonial images">
-						</div>
-						<div class="testimonial-bio">
-							<div class="bio-info">
-								<h3>Zahra Burnett</h3>
-								<span>United States</span>
-							</div>
-						</div>
-					</div>
-					<!-- testimonials item -->
-					<div class="single-testimonial">
-						<div class="rating-box">
-							<ul>
-								<li><i class="fa fa-star"></i></li>
-								<li><i class="fa fa-star"></i></li>
-								<li><i class="fa fa-star"></i></li>
-								<li><i class="fa fa-star"></i></li>
-								<li><i class="fa fa-star"></i></li>
-							</ul>
-						</div>
-						<div class="testimonial-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-								ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation.</p>
-						</div>
-						<div class="avatar">
-							<img src="{% static 'web/img/client/testimonial-3.jpg' %}" alt="testimonial images">
-						</div>
-						<div class="testimonial-bio">
-							<div class="bio-info">
-								<h3>Stevie Wills</h3>
-								<span>Germany</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- End Testimonial Section -->
+
 
 <!-- Start Faq Section -->
-<section class="faq-section home-faq bg-grey section-padding">
+<section class="faq-section home-faq bg-grey section-padding p-sm-30">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-12">
@@ -359,38 +195,14 @@
 				</div>
 				<div class="faq-accordion first-faq-box">
 					<ul class="accordion">
+
+						{% for faq in faqs %}
 						<li class="accordion-item">
-							<a class="accordion-title active" href="javascript:void(0)"> <i class="fa fa-plus"></i> How
-								long does a website redesign take?</a>
-							<p class="accordion-content show">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-								sed do eiusmod tempor labore et dolore magna aliqua. enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat officia deserunt
-								mollit anim laborum</p>
+							<a class="accordion-title" href="javascript:void(0)"> <i class="fa fa-plus"></i>{{ faq.question }}</a>
+							<p class="accordion-content">{{ faq.answer }}</p>
 						</li>
-						<li class="accordion-item">
-							<a class="accordion-title" href="javascript:void(0)"> <i class="fa fa-plus"></i> What
-								happens if my site breaks?</a>
-							<p class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor labore et dolore magna aliqua. enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat officia deserunt
-								mollit anim laborum</p>
-						</li>
-						<li class="accordion-item">
-							<a class="accordion-title" href="javascript:void(0)"> <i class="fa fa-plus"></i> Can you
-								handle ongoing maintenance?</a>
-							<p class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor labore et dolore magna aliqua. enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat officia deserunt
-								mollit anim laborum</p>
-						</li>
-						<li class="accordion-item">
-							<a class="accordion-title" href="javascript:void(0)"> <i class="fa fa-plus"></i> Do you only
-								create WordPress websites?</a>
-							<p class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor labore et dolore magna aliqua. enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat officia deserunt
-								mollit anim laborum</p>
-						</li>
+						{% endfor %}
+
 					</ul>
 				</div>
 			</div>
@@ -400,7 +212,7 @@
 <!-- End Faq Section -->
 
 
-<section class="blog-section section-padding">
+<section class="blog-section section-padding p-sm-30">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -447,13 +259,49 @@
 	</div>
 </section>
 
-
-<section class="testimonial-section section-padding">
+<!-- Start Testimonial Section -->
+<section class="testimonial-section section-padding pt-0 p-sm-30 testimonial-custom ">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="section-title">
-					<h6 class="sub-title">Trusted By Over 1500</h6>
+					<h6 class="sub-title">Our Testimonial</h6>
+					<h2>Client Feedback</h2>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12">
+				<div class="testimonial-slider owl-carousel owl-theme">
+					<!-- testimonials item -->
+					{% for item in testmonials %}
+					<div class="single-testimonial">
+						
+						<div class="testimonial-content">
+							<p>{{ item.description }}</p>
+						</div>
+						
+						<div class="testimonial-bio">
+							<div class="bio-info">
+								<h3>{{item.name}}</h3>
+								<span>{{item.position}}</span>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+					<!-- testimonials item -->
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Testimonial Section -->
+
+<section class="testimonial-section section-padding p-sm-30 pt-0">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="section-title">
+					<h6 class="sub-title">Trusted Clients</h6>
 					<h2>Our Customers</h2>
 				</div>
 			</div>

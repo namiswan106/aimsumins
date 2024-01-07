@@ -1290,7 +1290,7 @@ p:last-child {
 
 .home-section.home-2 .main-banner-content h1 {
     color: #362c72;
-    font-size: 68px;
+    font-size: 55px;
     font-weight: 700;
     margin: 0 0 20px 0;
 }
@@ -2492,7 +2492,7 @@ p:last-child {
 	z-index: 1;
 	padding: 120px 0;
 	text-align: center;
-	background: url(../img/banner-bg.jpg);
+	background: url(../img/banner-bg.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -3996,7 +3996,7 @@ blockquote::after, .blockquote::after {
 .page-title-area {
 	position: relative;
 	z-index: 1;
-	height: 400px;
+	height: 300px;
 	background-image: url(../img/page-title-bg.jpg);
 	background-position: center center;
 	background-size: cover;

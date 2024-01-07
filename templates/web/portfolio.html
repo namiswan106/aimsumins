@@ -10,7 +10,7 @@
 					<div class="page-title-content">
 						<h2>Portfolio</h2>
 						<ul>
-							<li><a href="index.html">Home</a></li>
+							<li><a href="{% url "web:index" %}">Home</a></li>
 							<li>Portfolio</li>
 						</ul>
 					</div>
@@ -21,7 +21,7 @@
 	<!-- End Page Title Section -->
 	
 	<!-- Start Portfolio Section -->
-    <section class="portfolio-area section-padding">
+    <section class="portfolio-area section-padding section-50-padd">
         <div class="container">
             <div class="row">
 				<div class="col-md-12">
@@ -51,7 +51,7 @@
 							<img src="{{item.image.url}}" alt="image">
                             <div class="portfolio-content-overlay">
 								<p>{{item.subtitle}}</p>
-								<h3><a href="single-portfolio.html">{{item.title}}</a></h3>
+								<h3><a href="javascript:void(0)">{{item.title}}</a></h3>
                             </div>
                         </div>
                     </div>

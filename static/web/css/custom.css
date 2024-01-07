@@ -3,6 +3,92 @@
     padding: 30px;
 }
 
-.service-slider .single-services-two-item{
+.service-slider .single-services-two-item {
     margin-bottom: 15px;
+}
+
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 70px;
+    right: 10px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+
+.my-float {
+    margin-top: 16px;
+}
+
+
+
+
+
+@media(max-width: 767px) {
+    .p-sm-30 {
+        padding: 30px 0 !important;
+    }
+
+    .home-section.home-2.p-sm-30 {
+        padding-top: 90px !important;
+        padding-bottom: 30px !important;
+    }
+
+    .service-main .section-title {
+        margin-bottom: 0;
+    }
+
+    .footer-area.ptb-100 {
+        padding-bottom: 10px;
+    }
+
+    .index-about-padd {
+        padding-bottom: 50px !important;
+    }
+
+    .testimonial-custom .section-title,.blog-section .section-title {
+        margin-bottom: 25px;
+    }
+
+    .about-area h6 {
+        font-size: 13px;
+    }
+
+    .about-area h2 {
+        font-size: 28px;
+    }
+
+    .about-area p {
+        font-size: 14px;
+    }
+
+    .counter-contents h3{
+        font-size: 14px;
+    }
+    .counter-contents h2{
+        font-size: 35px;
+    }
+    .home-faq .faq-accordion .accordion .accordion-item .accordion-title{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .single-testimonial .testimonial-content p{
+        font-size: 14px;
+    }
+
+    .section-50-padd {
+        padding: 50px 0 !important;
+    }
+}
+
+@media(max-width: 500px) {
+    .section-title h2 {
+        font-size: 2rem;
+    }
 }

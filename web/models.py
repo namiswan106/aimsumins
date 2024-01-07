@@ -8,7 +8,7 @@ from django.urls import reverse_lazy
 class Service(models.Model):
     title=models.CharField(max_length=200)
     slug=models.SlugField(unique=True, max_length=100)
-    image=VersatileImageField(upload_to='services')
+    image=VersatileImageField(upload_to='services',help_text=" The recommended size is 850x450 pixels.")
     description=HTMLField()
 
     def get_absolute_url(self):
@@ -24,7 +24,7 @@ class Blog(models.Model):
     title=models.CharField(max_length=200)
     slug=models.SlugField(unique=True, max_length=200)
     date=models.DateField(blank=True, null=True)
-    image=VersatileImageField(upload_to='blogs')
+    image=VersatileImageField(upload_to='blogs',help_text=" The recommended size is 650x450 pixels.")
     description=HTMLField()
     
     def get_absolute_url(self):
@@ -83,3 +83,11 @@ class Client_logo(models.Model):
     
     def __str__(self):
         return str(self.image)
+    
+class Team(models.Model):
+    name=models.CharField(max_length=200)
+    position=models.CharField(max_length=200)
+    image=VersatileImageField(upload_to='team')
+    
+    def __str__(self):
+        return self.name

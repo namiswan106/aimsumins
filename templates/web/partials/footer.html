@@ -2,29 +2,6 @@
 
 <!-- Start Footer & Subscribe Section -->
 <section class="footer-subscribe-wrapper">
-    <!-- Start Subscribe Section -->
-    {% if is_index %}
-    <div class="subscribe-area">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-6">
-                    <div class="subscribe-content">
-                        <h2>Sign Up Our Newsletter</h2>
-                        <p>We Offer An Informative Monthly Technology Newsletter - Check It Out.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <form class="newsletter-form">
-                        <input type="email" class="input-newsletter" name="email" placeholder="Enter Your Email"
-                            required autocomplete="off">
-                        <button type="submit">Subscribe Now</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    {% endif %}
-    <!-- End Subscribe Section -->
     <!-- Start Footer Section -->
     <div class="footer-area ptb-100">
         <div class="container">
@@ -34,9 +11,7 @@
                         <a class="footer-logo" href="#">
                             <img src="{% static 'web/img/logo.png' %}" class="white-logo" alt="logo">
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            consectetur laboris.</p>
+                        <p>Empower Your Business with Aimsumins - Your Trusted Partner in Strategic HR Solutions and Organizational Excellence.</p>
                         <ul class="footer-social">
                             <li>
                                 <a href="#"> <i class="fab fa-facebook-f"></i></a>
@@ -59,11 +34,10 @@
                             <h3>Our Services</h3>
                         </div>
                         <ul class="footer-quick-links">
-                            <li><a href="#">Startup Solutions</a></li>
-                            <li><a href="#">Web Development</a></li>
-                            <li><a href="#">Networking Services</a></li>
-                            <li><a href="#">SEO Optimization</a></li>
-                            <li><a href="#">Apps Development</a></li>
+                            {% for i in footer_services %}
+                            <li><a href="{{ i.get_absolute_url }}">{{ i.title }}</a></li>
+                            {% endfor %}
+                           
                         </ul>
                     </div>
                 </div>
@@ -73,11 +47,11 @@
                             <h3>Useful Links</h3>
                         </div>
                         <ul class="footer-quick-links">
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="portfolio.html">Case Study</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                            <li><a href="terms-condition.html">Terms & Conditions</a></li>
+                            <li><a href="{% url "web:about" %}">About Us</a></li>
+                            <li><a href="{% url "web:services" %}">Services</a></li>
+                            <li><a href="{% url "web:portfolio" %}">Portfolio</a></li>
+                            <li><a href="{% url "web:blogs" %}">Blogs</a></li>
+                            <li><a href="{% url "web:contact" %}">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -115,14 +89,9 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-6">
-                <p><i class="far fa-copyright"></i> 2023 Techvio - All Rights Reserved.</p>
+                <p><i class="far fa-copyright"></i> {% now "Y" %} aimsumins - All Rights Reserved.</p>
             </div>
-            <div class="col-lg-6 col-md-6">
-                <ul>
-                    <li><a href="terms-condition.html">Terms & Conditions</a></li>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                </ul>
-            </div>
+           
         </div>
     </div>
 </div>

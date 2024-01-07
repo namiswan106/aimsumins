@@ -7,7 +7,7 @@ from django.views.generic import ListView, DetailView, TemplateView
 from django.views.generic.edit import FormView, CreateView, UpdateView, DeleteView
 
 # models
-from .models import Service, Blog,PortfolioCategory,Portfolio,Client_logo
+from .models import Service, Blog,PortfolioCategory,Portfolio,Client_logo,Faq,Testmonial,Team
 from .forms import ContactForm
 
 
@@ -22,11 +22,20 @@ class IndexView(TemplateView):
         context["services"] = Service.objects.all()
         context["blogs"] = Blog.objects.all()
         context["client_logos"] = Client_logo.objects.all()
+        context["faqs"] = Faq.objects.all()
+        context["testmonials"] = Testmonial.objects.all()
+        
         return context
     
 
 class AboutView(TemplateView):
     template_name = "web/about.html"
+    
+    def get_context_data(self, **kwargs) -> dict[str, Any]:
+        context = super().get_context_data(**kwargs)
+        context["teams"] = Team.objects.all() 
+        return context
+    
     
 
 class ContactView(FormView):
