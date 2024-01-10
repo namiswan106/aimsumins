@@ -226,7 +226,7 @@ p:last-child {
 	padding-bottom: 13px;
 	border-radius: 5px;
 	display: inline-block;
-	background-color: #7b68ee;
+	background-color: #DBA74B;
 	box-shadow: 0 7px 25px rgb(123,104,238,0.25);
 	margin-top: 5px;
 	-webkit-transition: 0.4s;
@@ -536,7 +536,7 @@ p:last-child {
 	text-align: center;
 	line-height: 45px;
 	border-radius: 5px;
-	background-color: #7b68ee;
+	background-color: #dba74b;
 	-webkit-transition: .9s;
 	transition: .9s;
 	cursor: pointer;
@@ -2156,7 +2156,7 @@ p:last-child {
 	font-weight: 600;
     padding: 12px 15px;
     border-radius: 5px;
-    background-color: #7b68ee;
+    background-color: #dba74b;
     transition: all ease 350ms;
     -moz-transition: all ease 350ms;
     -webkit-transition: all ease 350ms;
@@ -2568,7 +2568,7 @@ p:last-child {
 
 .portfolio-area .portfolio-list .nav li:hover, .portfolio-area .portfolio-list .nav li.filter-active {
     color: #fff;
-    background-color: #7b68ee;
+    background-color: #dba74b;
 	-moz-transition: all 0.5s ease-in-out 0s;
 	-ms-transition: all 0.5s ease-in-out 0s;
 	-o-transition: all 0.5s ease-in-out 0s;
@@ -2814,7 +2814,7 @@ p:last-child {
 }
 
 .single-testimonial .testimonial-bio .bio-info span {
-	color: #7b68ee;
+	color: #dba74b;
     font-size: 16px;
     font-weight: 500;
     display: block;
@@ -2998,7 +2998,7 @@ p:last-child {
 	margin-bottom: 5px;
 }
 .team-info span {
-	color: #7b68ee;
+	color: #dba74b;
 	font-size: 16px;
 	font-weight: 500;
 	display: block;
@@ -4761,7 +4761,7 @@ blockquote::after, .blockquote::after {
 }
 
 .single-footer-widget .footer-social i {
-	color: #7b68ee;
+	color: #DBA74B;
 	font-size: 20px;
 	width: 40px;
 	height: 40px;
@@ -4777,8 +4777,8 @@ blockquote::after, .blockquote::after {
 
 .single-footer-widget .footer-social i:hover {
 	color: #ffffff;
-	border: 1px solid #7b68ee;
-	background-color: #7b68ee;
+	border: 1px solid #DBA74B;
+	background-color: #DBA74B;
 }
 
 .single-footer-widget p {

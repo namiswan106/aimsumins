@@ -7,7 +7,7 @@ from django.views.generic import ListView, DetailView, TemplateView
 from django.views.generic.edit import FormView, CreateView, UpdateView, DeleteView
 
 # models
-from .models import Service, Blog,PortfolioCategory,Portfolio,Client_logo,Faq,Testmonial,Team
+from .models import Service, Blog,PortfolioCategory,Portfolio,Client_logo,Faq,Testmonial,Team,Counter
 from .forms import ContactForm
 
 
@@ -24,6 +24,8 @@ class IndexView(TemplateView):
         context["client_logos"] = Client_logo.objects.all()
         context["faqs"] = Faq.objects.all()
         context["testmonials"] = Testmonial.objects.all()
+        context["counters"] = Counter.objects.all()[:4]
+        
         
         return context
     
@@ -31,9 +33,10 @@ class IndexView(TemplateView):
 class AboutView(TemplateView):
     template_name = "web/about.html"
     
-    def get_context_data(self, **kwargs) -> dict[str, Any]:
+    def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["teams"] = Team.objects.all() 
+        context["counters"] = Counter.objects.all()[:4]
         return context
     
     
@@ -85,7 +88,7 @@ class PortfolioView(ListView):
     model = Portfolio
     template_name = "web/portfolio.html"
     
-    def get_context_data(self, **kwargs) -> dict[str, Any]:
+    def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["categories"] = PortfolioCategory.objects.all()
         return context

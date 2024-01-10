@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.utils.safestring import mark_safe
 
 # Register your models here.
-from .models import Service, Blog, Testmonial, Faq ,Portfolio,PortfolioCategory,Contact,Client_logo,Team
+from .models import Service, Blog, Testmonial, Faq ,Portfolio,PortfolioCategory,Contact,Client_logo,Team,Counter
 
 
 class ImagePreviewAdminMixin:
@@ -67,3 +67,8 @@ class ClientLogoAdmin(admin.ModelAdmin,ImagePreviewAdminMixin):
 @admin.register(Team)
 class TeamAdmin(admin.ModelAdmin,ImagePreviewAdminMixin):
     list_display = ('name','position','image_preview')
+    
+    
+@admin.register(Counter)
+class CounterAdmin(admin.ModelAdmin):
+    list_display = ('title','number','plus_icon')

@@ -122,50 +122,22 @@
 <section class="counter-area section-padding p-sm-30 ">
 	<div class="container">
 		<div class="row">
+			{% for i in counters %}
 			<div class="col-lg-3 col-md-6 col-6 counter-item">
 				<div class="single-counter">
 					<div class="counter-contents">
 						<h2>
-							<span class="counter-number">23</span>
+							<span class="counter-number">{{i.number}}</span>
+							{% if i.plus_icon %}
 							<span>+</span>
+							{% endif %}
 						</h2>
-						<h3 class="counter-heading">Years Helping Business</h3>
+						<h3 class="counter-heading">{{i.title}}</h3>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-3 col-md-6 col-6 counter-item">
-				<div class="single-counter">
-					<div class="counter-contents">
-						<h2>
-							<span class="counter-number">250</span>
-							<span>+</span>
-						</h2>
-						<h3 class="counter-heading">Working Employees</h3>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6 col-6 counter-item">
-				<div class="single-counter">
-					<div class="counter-contents">
-						<h2>
-							<span class="counter-number">4500</span>
-							<span>+</span>
-						</h2>
-						<h3 class="counter-heading">Complete Projects</h3>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6 col-6 counter-item">
-				<div class="single-counter">
-					<div class="counter-contents">
-						<h2>
-							<span class="counter-number">3000</span>
-							<span>+</span>
-						</h2>
-						<h3 class="counter-heading">Happy Customers</h3>
-					</div>
-				</div>
-			</div>
+			{% endfor %}
+
 		</div>
 	</div>
 </section>
@@ -292,7 +264,7 @@
 	</div>
 </section>
 <!-- End Testimonial Section -->
-
+{% if client_logos %}
 <section class="testimonial-section section-padding p-sm-30 pt-0">
 	<div class="container">
 		<div class="row">
@@ -318,6 +290,6 @@
 		</div>
 	</div>
 </section>
-
+{% endif %}
 
 {% endblock %}
