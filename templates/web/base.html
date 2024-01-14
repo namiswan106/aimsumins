@@ -17,14 +17,14 @@
     <meta property="og:url" content="aimsumins.com" />
     <meta property="og:title" content="Aimsumins: Empowering Business Growth through Innovative HR Solutions" />
     <meta property="og:description" content="Unlock the potential of your business with Aimsumins, a leading HR consultancy that transcends traditional approaches. From strategic workforce planning to fostering engagement, we are your dedicated partner in driving organizational growth. Join us in shaping the future of HR where success aligns seamlessly with strategic vision." />
-    <meta property="og:image" content="https://aimsumins.com//static/web/img/meta.jpg" />
+    <meta property="og:image" content="https://aimsumins.com/static/web/img/meta.jpg" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="aimsumins.com" />
     <meta property="twitter:title" content="Aimsumins: Empowering Business Growth through Innovative HR Solutions" />
     <meta property="twitter:description" content="Unlock the potential of your business with Aimsumins, a leading HR consultancy that transcends traditional approaches. From strategic workforce planning to fostering engagement, we are your dedicated partner in driving organizational growth. Join us in shaping the future of HR where success aligns seamlessly with strategic vision." />
-    <meta property="twitter:image" content="https://aimsumins.com//static/web/img/meta.jpg" />
+    <meta property="twitter:image" content="https://aimsumins.com/static/web/img/meta.jpg" />
 
     <!-- Google Fonts -->
     <link href="/static/web/fonts.googleapis.com/css2ad7e.css?family=Dosis:wght@400;500;600;700;800&amp;display=swap"
@@ -58,7 +58,7 @@
     <!-- Owl Carousel Min CSS -->
     <link rel="stylesheet" href="{% static 'web/css/owl.carousel.min.css' %}">
     <!-- Style CSS -->
-    <link rel="stylesheet" href="{% static 'web/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/style.css' %}?v=1.1">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="{% static 'web/css/responsive.css' %}">
     <!-- custom CSS -->
@@ -69,14 +69,14 @@
 <body>
 
     <!-- Start Preloader Section -->
-    {% comment %} <div class="preloader">
+    <div class="preloader">
         <div class="loader">
             <div class="shadow"></div>
-            <div class="box"></div>
+            <img src="{% static 'web/img/logo.png' %}" class="white-logo" alt="logo">
+            
         </div>
-    </div> {% endcomment %}
+    </div> 
     <!-- End Preloader Section -->
-
 
     {% include "web/partials/header.html" %}
     {% block content %}{% endblock %}

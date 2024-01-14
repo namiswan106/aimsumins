@@ -30,7 +30,15 @@
     text-align: justify;
 }
 
+.preloader img{
+    width: 100px;
+}
 
+@media(min-width: 100px) {
+    .vision {
+        height: 93%;
+    }
+}
 
 
 @media(max-width: 767px) {
