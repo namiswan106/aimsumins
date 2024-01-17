@@ -12,7 +12,7 @@
 							<h1>Unlocking Potential: Your Trusted HR Partner for Strategic Solutions 
 								{% comment %} <span class="text-gradient">IT Support.</span> {% endcomment %}
 							</h1>
-							<p>Empowering Businesses through Tailored HR Solutions. From Recruitment to Employee Engagement, We Drive Success Together.</p>
+							<p>Empowering Businesses through Tailored HR Solutions From Recruitment to Employee Engagement, We Drive Success Together.</p>
 							<div class="banner-btn">
 								<a class="default-btn-one" href="{% url "web:services" %}">Our Service <span></span></a>
 								
@@ -21,7 +21,7 @@
 					</div>
 					<div class="col-lg-6 col-md-12">
 						<div class="banner-image">
-							<img src="{% static 'web/img/home-font-2.png' %}" alt="image">
+							<img src="{% static 'web/img/banner.png' %}" alt="image">
 						</div>
 					</div>
 				</div>
@@ -108,7 +108,7 @@
 			</div>
 			<div class="col-lg-6 col-md-12">
 				<div class="about-image">
-					<img src="{% static 'web/img/about-2.png' %}" alt="About image">
+					<img src="{% static 'web/img/home-about.png' %}" alt="About image">
 				</div>
 			</div>
 		</div>
@@ -179,6 +179,34 @@
 	</div>
 </section>
 <!-- End Faq Section -->
+
+<section class="team-area  pt-50 p-sm-30">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-12">
+				<div class="section-title">
+					<h6 class="sub-title">Team Member</h6>
+					<h2>Our Team</h2>
+				</div>
+			</div>
+			{% for team in teams %}
+			<div class="col-lg-3 col-md-6 ">
+				<div class="single-team-box">
+					<div class="team-image">
+						<img src="{{team.image.url}}" alt="team">
+						
+					</div>
+					<div class="team-info">
+						<h3>{{team.name}}</h3>
+						<span>{{team.position}}</span>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+			
+		</div>
+	</div>
+</section>
 
 
 <section class="blog-section section-padding p-sm-30">

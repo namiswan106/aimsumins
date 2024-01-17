@@ -25,6 +25,8 @@ class IndexView(TemplateView):
         context["faqs"] = Faq.objects.all()
         context["testmonials"] = Testmonial.objects.all()
         context["counters"] = Counter.objects.all()[:4]
+        context["teams"] = Team.objects.all() 
+
         
         
         return context
