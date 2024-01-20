@@ -9,10 +9,10 @@
 				<div class="row align-items-center">
 					<div class="col-lg-6 col-md-12">
 						<div class="main-banner-content">
-							<h1>Unlocking Potential: Your Trusted HR Partner for Strategic Solutions 
+							<h1>{{main.banner_title}} 
 								{% comment %} <span class="text-gradient">IT Support.</span> {% endcomment %}
 							</h1>
-							<p>Empowering Businesses through Tailored HR Solutions From Recruitment to Employee Engagement, We Drive Success Together.</p>
+							<p>{{main.banner_description}}</p>
 							<div class="banner-btn">
 								<a class="default-btn-one" href="{% url "web:services" %}">Our Service <span></span></a>
 								
@@ -21,7 +21,7 @@
 					</div>
 					<div class="col-lg-6 col-md-12">
 						<div class="banner-image">
-							<img src="{% static 'web/img/banner.png' %}" alt="image">
+							<img src="{{main.banner_image.url}}" alt="image">
 						</div>
 					</div>
 				</div>
@@ -98,8 +98,8 @@
 			<div class="col-lg-6 col-md-12">
 				<div class="about-content">
 					<h6 class="sub-title">About Our Company</h6>
-					<h2>Transforming Businesses, Empowering Talent: Discover Aimsumins</h2>
-					<p>AIM SUMINS HR CONSULTANCY LLC was started in the year of 2021 as a freelance service provider, and established in 2023 by a team of dedicated and professional consultants. The company will put its focus on analysing the current trends of the human resources to be able to provide qualitative and right quantity of human resources with great satisfaction. Our strong HR team supports us in connecting the right talent to ensure positive results. Our focused methodologies towards workforce solutions foster competent recruiting process and improvising on talent quality delivery. And our support solutions are cost effective yet comprehensive, providing clients to arrange a list of primary facilities, and unlimited advice and support.</p>
+					<h2>{{main.about_title}}</h2>
+					<p>{{main.about_description}}</p>
 					
 					<div class="about-btn-box">
 						<a class="default-btn" href="{% url "web:about" %}">Learn More <span></span></a>
@@ -108,7 +108,7 @@
 			</div>
 			<div class="col-lg-6 col-md-12">
 				<div class="about-image">
-					<img src="{% static 'web/img/home-about.png' %}" alt="About image">
+					<img src="{{main.about_image.url}}" alt="About image">
 				</div>
 			</div>
 		</div>
@@ -180,33 +180,31 @@
 </section>
 <!-- End Faq Section -->
 
-<section class="team-area  pt-50 p-sm-30">
+
+<!-- Start About Section -->
+<section class="about-area  section-padding pb-0 p-sm-30 ">
 	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-md-12">
-				<div class="section-title">
-					<h6 class="sub-title">Team Member</h6>
-					<h2>Our Team</h2>
+		<div class="row d-flex align-items-center">
+			<div class="col-lg-6 col-md-12">
+				<div class="about-image">
+					<img src="{% static 'web/img/ceo.jpg' %}" alt="About image">
 				</div>
 			</div>
-			{% for team in teams %}
-			<div class="col-lg-3 col-md-6 ">
-				<div class="single-team-box">
-					<div class="team-image">
-						<img src="{{team.image.url}}" alt="team">
-						
-					</div>
-					<div class="team-info">
-						<h3>{{team.name}}</h3>
-						<span>{{team.position}}</span>
-					</div>
+			<div class="col-lg-6 col-md-12">
+				<div class="about-content">
+					<h2>Mini Suseel</h2>
+					<h6 class="sub-title">CEO</h6>
+					<p>With a vision that extends beyond conventional HR practices, I, Mini Suseel, as the CEO of AIM SUMINS HR CONSULTANCY LLC, lead a team of dedicated and professional consultants. Our journey began in 2021 as a freelance service provider and evolved into an established entity in 2023.</p>
+
 				</div>
 			</div>
-			{% endfor %}
 			
 		</div>
 	</div>
 </section>
+<!-- End About Section -->
+
+
 
 
 <section class="blog-section section-padding p-sm-30">

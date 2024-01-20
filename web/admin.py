@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.utils.safestring import mark_safe
 
 # Register your models here.
-from .models import Service, Blog, Testmonial, Faq ,Portfolio,PortfolioCategory,Contact,Client_logo,Team,Counter
+from .models import Service, Blog, Testmonial, Faq ,Portfolio,PortfolioCategory,Contact,Client_logo,Team,Counter ,Main
 
 
 class ImagePreviewAdminMixin:
@@ -72,3 +72,14 @@ class TeamAdmin(admin.ModelAdmin,ImagePreviewAdminMixin):
 @admin.register(Counter)
 class CounterAdmin(admin.ModelAdmin):
     list_display = ('title','number','plus_icon')
+    
+@admin.register(Main)
+class MainAdmin(admin.ModelAdmin):
+    fieldsets = (
+        ('Banner', {
+            'fields': ('banner_title', 'banner_image', 'banner_description'),
+        }),
+        ('About', {
+            'fields': ('about_title', 'about_image', 'about_description'),
+        }),
+    )

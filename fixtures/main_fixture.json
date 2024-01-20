@@ -1,0 +1,14 @@
+[
+{
+  "model": "web.main",
+  "pk": 1,
+  "fields": {
+    "banner_title": "Unlocking Potential: Your Trusted HR Partner for Strategic Solutions",
+    "banner_image": "main/banner.png",
+    "banner_description": "Empowering Businesses through Tailored HR Solutions From Recruitment to Employee Engagement, We Drive Success Together.",
+    "about_title": "Transforming Businesses, Empowering Talent: Discover Aimsumins",
+    "about_image": "main/home-about.png",
+    "about_description": "AIM SUMINS HR CONSULTANCY LLC was started in the year of 2021 as a freelance service provider, and established in 2023 by a team of dedicated and professional consultants. The company will put its focus on analysing the current trends of the human resources to be able to provide qualitative and right quantity of human resources with great satisfaction. Our strong HR team supports us in connecting the right talent to ensure positive results. Our focused methodologies towards workforce solutions foster competent recruiting process and improvising on talent quality delivery. And our support solutions are cost effective yet comprehensive, providing clients to arrange a list of primary facilities, and unlimited advice and support."
+  }
+}
+]

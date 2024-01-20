@@ -101,3 +101,19 @@ class Counter(models.Model):
     def __str__(self):
         return self.title
     
+    
+class Main(models.Model):
+    banner_title=models.CharField(max_length=200)
+    banner_image=VersatileImageField(upload_to='main')
+    banner_description=models.TextField()
+    about_title=models.CharField(max_length=200)
+    about_image=VersatileImageField(upload_to='main')
+    about_description=models.TextField()
+    
+    def __str__(self):
+        return self.banner_title
+    
+    class Meta:
+        verbose_name = "Main"
+        verbose_name_plural = "Main"
+    
