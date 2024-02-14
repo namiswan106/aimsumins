@@ -187,14 +187,14 @@
 		<div class="row d-flex align-items-center">
 			<div class="col-lg-6 col-md-12">
 				<div class="about-image">
-					<img src="{% static 'web/img/ceo.jpg' %}" alt="About image">
+					<img src="{% static 'web/img/ceo2.jpg' %}" alt="About image">
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-12">
 				<div class="about-content">
 					<h2>Mini Suseel</h2>
 					<h6 class="sub-title">CEO</h6>
-					<p>With a vision that extends beyond conventional HR practices, I, Mini Suseel, as the CEO of AIM SUMINS HR CONSULTANCY LLC, lead a team of dedicated and professional consultants. Our journey began in 2021 as a freelance service provider and evolved into an established entity in 2023.</p>
+					<p>With a visionary outlook that surpasses conventional HR practices, I, Mini Suseel, proudly serve as the CEO of AIM SUMINS HR CONSULTANCY LLC, leading a team of dedicated and adept consultants. Our journey commenced with my 15-year tenure as a successful entrepreneur in India, specifically Kerala, where I established and managed Sumins Homecare Products and Marketing. This rich experience laid the foundation for our consultancy's inception as a freelance service provider in the UAE market for 2 years, culminating in our evolution into an established entity in 2023.</p>
 
 				</div>
 			</div>
@@ -221,7 +221,7 @@
 					{% for item in blogs %}
 					<div class="blog-single-item">
 						<div class="blog-image">
-							<a href="single-blog.html">
+							<a href="{{item.get_absolute_url}}">
 								<img src="{{item.image.url}}" alt="image">
 							</a>
 						</div>
@@ -304,7 +304,7 @@
 				<div class="clientlogo-slider owl-carousel owl-theme">
 					{% for i in client_logos %}
 					<div class="partner-item">
-						<a href="#0">
+						<a href="#">
 							<img src="{{i.image.url}}" alt="image">
 						</a>
 					</div>
