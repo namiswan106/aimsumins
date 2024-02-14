@@ -1,0 +1,51 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block content %}
+	
+	
+	<!-- Start Page Title Section -->
+	<div class="page-title-area item-bg2">
+		<div class="d-table">
+			<div class="d-table-cell">
+				<div class="container">
+					<div class="page-title-content">
+						<h2>Find Job</h2>
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li>Find Job</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Page Title Section -->
+	
+	<!-- Start Services Section -->
+	<section class="services-section section-padding">
+		<div class="container">
+			<div class="row">
+				{% for item in object_list %}
+				<div class="col-lg-4 col-md-6 job-card">
+					<div class="single-services-item">
+						
+						<h3>{{ item.title }}</h3>
+						<p class="job-type">{{ item.job_type }}</p>
+						<p>salary: {{ item.salary }}</p>
+
+						<div class="services-btn">
+							<a href="{{ item.get_absolute_url }}" class="read-more"> Details <i class="bi bi-arrow-right-short"></i></a>
+						</div>
+						
+					</div>
+				</div>
+				{% endfor %}
+
+			</div>
+		</div>
+	</section>
+	<!-- End Services Section -->
+	
+
+	
+{% endblock %}

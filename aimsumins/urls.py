@@ -9,6 +9,7 @@ urlpatterns = (
     [
         path("admin/", admin.site.urls),
         path("", include("web.urls", namespace="web")),
+        path("job/", include("job.urls", namespace="job")),
         path("sitemap.xml", TemplateView.as_view(template_name="sitemap.xml", content_type="text/xml")),
         path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
     ]

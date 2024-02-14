@@ -14,7 +14,7 @@
             </div>
         </div>
     </div>
-    <div class="techvio-nav {% if is_index %} index-navber {% endif %}">
+    <div class="techvio-nav ">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
                 <a class="navbar-brand" href="{% url "web:index" %}">
@@ -33,7 +33,7 @@
                             <a href="{% url "web:services" %}" class="nav-link">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url "web:portfolio" %}" class="nav-link">Portfolio</a>
+                            <a href="{% url "web:job" %}" class="nav-link">Find Job</a>
                         </li>
                         <li class="nav-item">
                             <a href="{% url "web:blogs" %}" class="nav-link">Blog</a>
@@ -44,6 +44,9 @@
                     </ul>
                     <div class="other-option">
                         <a class="default-btn" href="mailto:hr@aimsumins.com">Get It Support <span></span></a>
+                    </div>
+                    <div class="other-option for-hire">
+                        <a class="default-btn" href="{% url "web:hire-enquiry" %}">For Hire <span></span></a>
                     </div>
                 </div>
             </nav>

@@ -117,3 +117,13 @@ class Main(models.Model):
         verbose_name = "Main"
         verbose_name_plural = "Main"
     
+
+class HireEnquiry(models.Model):
+    name=models.CharField(max_length=200)
+    email=models.EmailField()
+    phone=models.CharField(max_length=200)
+    job=models.CharField(max_length=200)
+   
+    
+    def __str__(self):
+        return self.name

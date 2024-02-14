@@ -1270,7 +1270,7 @@ p:last-child {
 .home-section.home-2 {
     position: relative;
     z-index: 1;
-    height: 800px;
+    height: 550px;
     min-height: 100vh;
     background: url(../img/home-bg-5.svg);
     background-repeat: no-repeat;
