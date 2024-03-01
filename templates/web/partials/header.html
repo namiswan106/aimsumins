@@ -27,13 +27,13 @@
                             <a href="{% url "web:index" %}" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url "web:about" %}" class="nav-link">About Us</a>
+                            <a href="{% url "web:about" %}" class="nav-link">About us</a>
                         </li>
                         <li class="nav-item">
                             <a href="{% url "web:services" %}" class="nav-link">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url "web:job" %}" class="nav-link">Find Job</a>
+                            <a href="{% url "web:job" %}" class="nav-link">Find a job</a>
                         </li>
                         <li class="nav-item">
                             <a href="{% url "web:blogs" %}" class="nav-link">Blog</a>
@@ -42,13 +42,13 @@
                             <a href="{% url "web:portfolio" %}" class="nav-link">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url "web:contact" %}" class="nav-link">Contact</a>
+                            <a href="{% url "web:contact" %}" class="nav-link">Contact us</a>
                         </li>
                     </ul>
-                    <div class="other-option">
+                    {% comment %} <div class="other-option">
                         <a class="default-btn" href="mailto:hr@aimsumins.com">Get It Support <span></span></a>
-                    </div>
-                    <div class="other-option for-hire">
+                    </div> {% endcomment %}
+                    <div class="other-option">
                         <a class="default-btn" href="{% url "web:hire-enquiry" %}">Post a job <span></span></a>
                     </div>
                 </div>

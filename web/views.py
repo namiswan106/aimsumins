@@ -30,6 +30,7 @@ class IndexView(TemplateView):
         context["teams"] = Team.objects.all() 
         context["main"] = Main.objects.first()
         context["jobs"] = Job.objects.all().order_by("-id")
+        context["portfolios"] = Portfolio.objects.all()
 
         
         

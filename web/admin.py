@@ -43,16 +43,15 @@ class PortfolioInline(admin.TabularInline):
     extra = 1
     fields = ('title','subtitle','image')
         
-@admin.register(PortfolioCategory)
-class PortfolioCategoryAdmin(admin.ModelAdmin):
-    list_display = ('name',)
-    inlines = [PortfolioInline]
+# @admin.register(PortfolioCategory)
+# class PortfolioCategoryAdmin(admin.ModelAdmin):
+#     list_display = ('name',)
+#     inlines = [PortfolioInline]
     
 
 @admin.register(Portfolio)
-class PortfolioAdmin(admin.ModelAdmin):
-    list_display = ('title','category')
-    list_filter = ('category',)
+class PortfolioAdmin(admin.ModelAdmin,ImagePreviewAdminMixin):
+    list_display = ("image_preview",)
     
     
 @admin.register(Contact)

@@ -8,10 +8,10 @@
 			<div class="d-table-cell">
 				<div class="container">
 					<div class="page-title-content">
-						<h2>Portfolio</h2>
+						<h2>Gallery</h2>
 						<ul>
 							<li><a href="{% url "web:index" %}">Home</a></li>
-							<li>Portfolio</li>
+							<li>Gallery</li>
 						</ul>
 					</div>
 				</div>
@@ -26,21 +26,10 @@
             <div class="row">
 				<div class="col-md-12">
 					<div class="section-title">
-						<h6 class="sub-title">Recent Works</h6>
-						<h2>Our Portfolio</h2>
+						<h2>Our Gallery</h2>
 					</div>
 				</div>
-                <div class="col-md-12">
-                    <div class="portfolio-list">
-                        <ul class="nav" id="portfolio-flters">
-                            <li class="filter filter-active" data-filter=".all">all</li>
-                            {% for i in categories %}
-                            <li class="filter" data-filter=".{{i.name|slugify}}">{{i.name}}</li>
-                            {% endfor %}
-                            
-                        </ul>
-                    </div>
-                </div>
+               
             </div>
             <div class="portfolio-container">
 				<div class="row">
@@ -49,10 +38,7 @@
                     <div class="col-lg-4 col-md-6 portfolio-grid-item all {{item.category.name|slugify}}">
                         <div class="portfolio-item">
 							<img src="{{item.image.url}}" alt="image">
-                            <div class="portfolio-content-overlay">
-								<p>{{item.subtitle}}</p>
-								<h3><a href="javascript:void(0)">{{item.title}}</a></h3>
-                            </div>
+                           
                         </div>
                     </div>
                     {% endfor %}

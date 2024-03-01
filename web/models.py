@@ -58,14 +58,15 @@ class PortfolioCategory(models.Model):
         return self.name
     
 class Portfolio(models.Model):
-    category=models.ForeignKey(PortfolioCategory, on_delete=models.CASCADE)
-    subtitle=models.CharField(max_length=200)
-    title=models.CharField(max_length=200)
     image=VersatileImageField(upload_to='portfolio',help_text=" The recommended size is 650x450 pixels.")
+    
+    class Meta:
+        verbose_name = ("Gallery")
+        verbose_name_plural = ("Gallery")
     
     
     def __str__(self):
-        return self.title
+        return str(self.image)
     
     
 class Contact(models.Model):

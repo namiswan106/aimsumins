@@ -822,7 +822,7 @@ p:last-child {
 	color: #ffffff;
 	font-size: 16px;
 	font-weight: 600;
-	text-transform: capitalize;
+	/* text-transform: capitalize; */
 	padding-top: 0;
 	padding-left: 0;
 	padding-right: 0;
@@ -1276,6 +1276,7 @@ p:last-child {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+	padding-bottom: 50px;
 }
 
 .home-section.home-2 .main-banner-content {
